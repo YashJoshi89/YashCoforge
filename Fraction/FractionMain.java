@@ -1,8 +1,10 @@
+package FractionMain;   
+
 import java.util.Scanner;
 
-public class fraction {
-    
-        public static void main(String[] args) {
+public class FractionMain {
+
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -24,26 +26,10 @@ public class fraction {
         int numerator = (num1 * den2) + (num2 * den1);
         int denominator = den1 * den2;
 
-        // Simplify the fraction
-        int gcd = findGCD(numerator, denominator);
-
-        numerator /= gcd;
-        denominator /= gcd;
-
         System.out.println("Sum = " + numerator + "/" + denominator);
 
         sc.close();
     }
 
-    // Method to find GCD
-    static int findGCD(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
-        }
-        return a;
-    }
-
-    }
-
+    
+}
